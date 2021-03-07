@@ -6,7 +6,6 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var monteRouter = require('./routes/monte_carlo');
-var monte2Router = require('./routes/monte_carlo2');
 
 var app = express();
 
@@ -22,6 +21,5 @@ app.use(express.urlencoded({limit: '500mb', extended: true}));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/monteCarlo', cors(), monteRouter);
-app.use('/monteCarlo2', cors(), monte2Router);
 
 module.exports = app;
